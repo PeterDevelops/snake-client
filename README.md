@@ -9,7 +9,7 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 !["Snake game server"](snakegame.png)
-!["Welcome Terminal"](snaketerminal-2.png)
+!["Welcome Terminal"](snaketerminal.png)
 
 ## Getting Started
 
