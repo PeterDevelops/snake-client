@@ -4,7 +4,7 @@ const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
+  stdin.setEncoding('utf8');
   stdin.resume();
   stdin.on('data', (handleUserInput) => {
   if (handleUserInput === 'w') {
@@ -19,6 +19,12 @@ const setupInput = (conn) => {
   if (handleUserInput === 'd') {
     connection.write('Move: right');
   }
+  if (handleUserInput === 'q') {
+    conn.write('Say: Nice try!');
+  }
+  if (handleUserInput === 'e') {
+    conn.write('Say: So Close!');
+  }
   if (handleUserInput === 'x') {
     connection.write('Say: Wow!');
   }
@@ -26,13 +32,7 @@ const setupInput = (conn) => {
     conn.write('Say: Nice!');
   }
   if (handleUserInput === 'v') {
-    conn.write('Say: Naww :P');
-  }
-  if (handleUserInput === 'q') {
-    conn.write('Say: So close!');
-  }
-  if (handleUserInput === 'e') {
-    conn.write('Say: Nice Try!');
+    conn.write('Say: GG :D');
   }
   if (handleUserInput === '\u0003') {
     process.exit();
